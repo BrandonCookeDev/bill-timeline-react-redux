@@ -20,8 +20,11 @@ class SalaryForm extends Component {
 	
   /* Forms shouldn't need to access props, only state */
   handleChange(event) {
-		this.setState({[event.target.name]: event.target.value})
-		this.handleSubmit(event)
+	  let _this = this;
+	return new Promise(function(resolve, reject){
+		resolve(_this.setState({[event.target.name]: event.target.value}))
+	})
+	.then(() => this.handleSubmit(event))
   }
 
   handleSubmit(event) {
@@ -42,11 +45,11 @@ class SalaryForm extends Component {
 			<div>
 				<form onSubmit={this.handleSubmit}>
 					<div class="left">
-						<table class="salary-form">
+						<table class="salary-form left">
 							<tr>
 								<td><label>Salary Division:</label></td>
 								<td>
-									<select name="division" onChange={this.handleChange} value={this.state.division}>
+									<select name="division" onChange={this.handleChange} value={this.state.division} onKeyUp={this.handleChange}>
 										{divisionOptions}
 									</select>
 								</td>

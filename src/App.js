@@ -6,6 +6,8 @@ import './App.css';
 
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import BillForm from './components/BillForm';
+import BillList from './components/BillList';
 
 class App extends Component {
   render() {
@@ -18,8 +20,13 @@ class App extends Component {
         </div>
         <div class="container">
           <SalaryForm />
-          <hr/>
           <SalaryCalculator />
+        </div>
+        <br/>
+        <hr/>
+        <div class="container">
+          <BillForm />
+          <BillList />
         </div>
       </Provider>
     );

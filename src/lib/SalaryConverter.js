@@ -29,37 +29,37 @@ export default class SalaryConverter{
 
 	convertYearlySalary(){
 		if(this.division === 'YEARLY'){
-			this.hourly = this.amount / 52 / 5 / 40
-			this.monthly = this.amount / 12
-			this.bimonthly = this.amount / 12 / 2
-			this.yearly = this.amount
+			this.hourly = (this.amount / 52 / 5 / 40).toFixed(2)
+			this.monthly = (this.amount / 12).toFixed(2)
+			this.bimonthly = (this.amount / 12 / 2).toFixed(2)
+			this.yearly = (this.amount).toFixed(2)
 		}
 	}
 
 	convertMonthlySalary(){
 		if(this.division === 'MONTHLY'){
-			this.hourly = this.amount / 4 / 5 / 40
-			this.monthly = this.amount
-			this.bimonthly = this.amount/ 2
-			this.yearly = this.amount * 12
+			this.hourly = (this.amount / 4 / 5 / 40).toFixed(2)
+			this.monthly = (this.amount).toFixed(2)
+			this.bimonthly = (this.amount/ 2).toFixed(2)
+			this.yearly = (this.amount * 12).toFixed(2)
 		}
 	}
 
 	convertBimonthlySalary(){
 		if(this.division === 'MONTHLY'){
-			this.hourly = this.amount / 4 / 5 / 40
-			this.monthly = this.amount
-			this.bimonthly = this.amount / 2
-			this.yearly = this.amount * 12
+			this.hourly = (this.amount / 4 / 5 / 40).toFixed(2)
+			this.monthly = (this.amount).toFixed(2)
+			this.bimonthly = (this.amount / 2).toFixed(2)
+			this.yearly = (this.amount * 12).toFixed(2)
 		}
 	}
 
 	convertHourlySalary(){
 		if(this.division === 'HOURLY'){
-			this.hourly = this.amount
-			this.monthly = this.amount * 40 * 5 * 4
-			this.bimonthly = this.amount * 40 * 5 * 2
-			this.yearly = this.amount * 40 * 5 * 12
+			this.hourly = (this.amount).toFixed(2)
+			this.monthly = (this.amount * 40 * 5 * 4).toFixed(2)
+			this.bimonthly = (this.amount * 40 * 5 * 2).toFixed(2)
+			this.yearly = (this.amount * 40 * 5 * 12).toFixed(2)
 		}
 	}
 }
