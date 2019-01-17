@@ -21,6 +21,7 @@ class SalaryForm extends Component {
   /* Forms shouldn't need to access props, only state */
   handleChange(event) {
 		this.setState({[event.target.name]: event.target.value})
+		this.handleSubmit(event)
   }
 
   handleSubmit(event) {
