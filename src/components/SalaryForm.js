@@ -11,7 +11,8 @@ class SalaryForm extends Component {
 
 		this.state = {
 			division: 'MONTHLY',
-			salary: 0
+			salary: 0,
+			taxRate: 0.0
 		}
 
 		this.handleChange = this.handleChange.bind(this)
@@ -29,11 +30,7 @@ class SalaryForm extends Component {
 
   handleSubmit(event) {
 		event.preventDefault()
-		let params = {
-			salary: this.state.salary,
-			division: this.state.division
-		}
-		this.props.updateSalary(params)
+		this.props.updateSalary(this.state)
 	}
 
 
@@ -59,6 +56,13 @@ class SalaryForm extends Component {
 								<td>
 									<input type="number" max="1000000" name="salary" 
 										value={this.state.salary} onChange={this.handleChange} />
+								</td>
+							</tr>
+							<tr>
+								<td><label>County Tax Rate:</label></td>
+								<td>
+									<input type="number" max="100" name="taxRate"
+										value={this.state.taxRate} onChange={this.handleChange} />
 								</td>
 							</tr>
 							<tr><input type="Submit" value="Calculate" /> </tr>

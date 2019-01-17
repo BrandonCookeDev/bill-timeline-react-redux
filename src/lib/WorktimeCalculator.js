@@ -1,0 +1,6 @@
+
+const WEEKS_IN_A_YEAR = 52
+const WORKDAYS_IN_A_WEEK = 5
+const HOURS_IN_A_DAY = 24
+const MONTHS_IN_A_YEAR = 12
+const WEEKS_IN_A_MONTH = 4

@@ -1,5 +1,5 @@
 import { FETCH_SALARY, SUBMIT_SALARY, UPDATE_SALARY } from '../actions/types'
-import SalaryConverter from '../../util/SalaryConverter'
+import SalaryConverter from '../../lib/SalaryConverter'
 
 const initialState = {
 	salary: 0,
@@ -22,6 +22,7 @@ export default function(state=initialState, action){
 		case UPDATE_SALARY:
 			let amount = action.payload.salary
 			let division = action.payload.division
+			let taxRate = action.payload.taxRate
 
 			let converter = new SalaryConverter(amount, division);
 			converter.convert();

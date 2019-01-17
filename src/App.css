@@ -56,3 +56,10 @@ table.left{
 table.pad > th td{
   padding: 10 10 10 10
 }
+
+line.timeline{
+  stroke:red;
+  stroke-width: 2px;
+  -webkit-text-stroke: red;
+  -webkit-text-stroke-width: 2px;
+}
