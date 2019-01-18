@@ -63,3 +63,29 @@ line.timeline{
   -webkit-text-stroke: red;
   -webkit-text-stroke-width: 2px;
 }
+
+line.bill{
+  stroke: black;
+  -webkit-text-stroke: black;
+  stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
+}
+
+line.me{
+  stroke: blue;
+  -webkit-text-stroke: blue;
+  stroke-width: .5px;
+  -webkit-text-stroke-width: 2px;
+}
+
+line.divider{
+  stroke: red;
+  -webkit-text-stroke: red;
+  stroke-width: .2px;
+  -webkit-text-stroke-width: 2px;
+}
+
+text.bill{
+  font-size: 3px;  
+  transform: scale(1, 2)
+}

@@ -1,3 +1,4 @@
+import moment from 'moment'
 
 export default class BillCreator{
 	constructor(name, amount, dueDate){
@@ -6,5 +7,6 @@ export default class BillCreator{
 		this.dueDate = dueDate
 	}
 
+	
 	
 }

@@ -29,6 +29,10 @@ export default class SalaryConverter{
 		}
 	}
 
+	applyTax(amount){
+		return (amount - (amount * this.taxRate))
+	}
+
 	convertYearlySalary(){
 		if(this.division === 'YEARLY'){
 			this.hourly = (+this.amount / 52 / 5 / 40).toFixed(2)

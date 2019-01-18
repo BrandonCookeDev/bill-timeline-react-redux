@@ -24,7 +24,7 @@ export default function(state=initialState, action){
 			let division = action.payload.division
 			let taxRate = action.payload.taxRate
 
-			let converter = new SalaryConverter(amount, division);
+			let converter = new SalaryConverter(amount, division, taxRate);
 			converter.convert();
 
 			return {

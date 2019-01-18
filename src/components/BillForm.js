@@ -22,9 +22,9 @@ class BillForm extends Component {
 	}
   
 	handleSubmit(event) {
-		  event.preventDefault()
-		  this.props.submitBill(this.state)
-	  }
+		event.preventDefault()
+		this.props.submitBill(this.state)
+	}
 	
 	render() {
 	return (
@@ -38,7 +38,8 @@ class BillForm extends Component {
 					</tr>
 					<tr>
 						<td><label>Amount: </label></td>
-						<td><input type="number" name="amount" onChange={this.handleChange} required /></td>
+						<td><input type="number" name="amount" onChange={this.handleChange} 
+							 step="0.01" min="0.01" required /></td>
 					</tr>
 					<tr>
 						<td><lable>Due Date: </lable></td>

@@ -54,7 +54,7 @@ class SalaryForm extends Component {
 							<tr>
 								<td><label>Salary: </label></td>
 								<td>
-									<input type="number" max="1000000" name="salary" 
+									<input type="number" max="1000000" name="salary" step="0.01" min="0.01"
 										value={this.state.salary} onChange={this.handleChange} />
 								</td>
 							</tr>
